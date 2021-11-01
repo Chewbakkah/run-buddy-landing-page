@@ -76,3 +76,71 @@ header {
   footer a {
       color: #024e76;
   }
+  /* apply padding to all section elements */
+  section {
+      padding: 60px;
+  }
+  /* apply styles to hero */
+  .hero {
+      background-image: url("../images/hero-bg.jpg");
+      height: 600px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+  }
+  /* apply styles to hero-form */
+  .hero-form {
+      background-color: #fce138;
+      padding: 20px;
+      width: 500px;
+      color: #024e76;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #024e76;
+      position: absolute;
+      bottom: 120px;
+      right: 140px;
+  }
+  /* apply styles to h3 */
+  h3 {
+      margin: 0px;
+      font-size: 25px;
+  }
+  /* apply styles to form body text */
+  .hero-form p {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      margin-left: 0px;
+      margin-right: 0px;
+  }
+  /* apply sytles to form input boxes */
+  .form-input {
+      border: 1px solid #024e76;
+      display: block;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 16px;
+      color:#024e76;
+      width: 100%;
+      margin-bottom: 15px;
+  }
+  /*apply styles to form radio button selections */
+  .hero-form label {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  /*apply styles to form submit button */
+  .hero-form button{
+      background-color: #024e76;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 16px;
+      color: #fce138;
+  }

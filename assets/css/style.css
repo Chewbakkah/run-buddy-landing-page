@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-/* apply styles to <body>*/
+/* apply styles to <body> */
 body {
     color: #39a6b2;
     font-family: Helvetica, Arial, sans-serif;
@@ -15,7 +16,7 @@ header {
     padding-right: 35px;
     background-color: #39a6b2;
   }
-  /* apply styles to header h1*/
+  /* apply styles to header h1 */
   header h1 {
       font-weight: bold;
       font-size: 36px;
@@ -48,4 +49,30 @@ header {
       margin-right: 30px;
       font-weight: lighter;
       font-size: 22px;
+  }
+  /* apply styles to footer */
+  footer {
+      background: #fce138;
+      width: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      padding-left: 35px;
+      padding-right: 35px;
+  }
+  /* apply styles to footer h2 */
+  footer h2 {
+      display: inline;
+      color: #024e76;
+      font-size: 30px;
+      margin: 0;
+  }
+  /* apply styles to footer div */
+  footer div {
+      float: right;
+      line-height: 1.5;
+      text-align: right;
+  }
+  /* apply styles to footer link */
+  footer a {
+      color: #024e76;
   }

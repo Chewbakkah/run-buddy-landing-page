@@ -273,4 +273,34 @@ header {
       width: 400px;
       height: 400px;
   }
-
+  /* apply styles to the contact info second column */
+  .contact-info div {
+      width: 410px;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      margin-left: 60px;
+      margin-right: 0px;
+      color: #ffffff;
+  }
+  /* apply style contact info head text */
+  .contact-info h3 {
+    color: #fce138;
+    font-size: 32px;
+  }
+  /* apply style contact info p */
+  .contact-info p, .contact-info address {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 0px;
+      margin-right: 0px;
+      line-height: 1.5;
+      font-size: 20px;
+      font-style: normal;
+  }
+  /* apply style contact info link */
+  .contact-info a {
+      color: #fce138;
+  }

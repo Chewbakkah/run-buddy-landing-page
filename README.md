@@ -13,3 +13,5 @@ https://lernantino.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Cheyne Etie
+
+# Run Buddy Inc.

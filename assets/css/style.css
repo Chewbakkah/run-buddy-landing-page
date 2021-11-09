@@ -149,10 +149,6 @@ header {
       font-size: 16px;
       color: #fce138;
   }
-  /* apply styles to what we do */
-  .intro {
-      text-align: center;
-  }
   /* apply styles to what we do txt */
   .intro p {
       line-height: 1.7;
@@ -160,24 +156,22 @@ header {
       width: 80%;
       font-size: 20px;
       margin: 0 auto;
+      text-align: center;
   }
   /* apply styles to what you do section */
   .steps {
-      text-align: center;
       background: #fce138;
   }
   /* apply style to body content headers */
   .section-title {
       font-size: 55px;
       color: #024e76;
-      margin-bottom: 35px;
-      padding-top: 0px;
-      padding-bottom: 20px;
-      padding-left: 100px;
-      padding-right: 100px;
       border-bottom: 3px;
       border-bottom: solid;
-      display: inline-block;
+      padding-bottom: 20px;
+      text-align: center;
+      margin: 0 auto 35px auto;
+      width: 50%;
   }
   /* apply style to border under content header what we do */
   .primary-border {
@@ -215,9 +209,7 @@ header {
       font-size: 38px;
   }
   /* apply styles to trainer bio section */
-  .trainers {
-      text-align: center;
-  }
+  .trainers {}
   /* apply styles to trainer article */
   .trainer {
       width 900px;
@@ -240,14 +232,6 @@ header {
       float: left;
       width: 65%;
   }
-  /* applys style to override text alignment */
-  .text-left {
-      text-align: left;
-  }
-  /* applys style to override text alignment */
-  .text-right {
-      text-align: right;
-  }
   /* apply style to trainer bio text */
   .trainer-bio h3 {
       font-size: 32px;
@@ -266,7 +250,6 @@ header {
   }
   /* apply styles to reach out section */
   .contact {
-      text-align: center;
       background: #024e76;
   }
   /* apply styles to reach out heading */
@@ -323,4 +306,15 @@ header {
       font-style: italic;
       font-size: 55px;
       color: #fce138;
-  }
+}
+  /* applys style to override text alignment */
+  .text-left {
+    text-align: left;
+}
+/* applys style to override text alignment */
+.text-right {
+    text-align: right;
+}
+.flex-row {
+    display: flex;
+}

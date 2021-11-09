@@ -181,32 +181,52 @@ header {
   .secondary-border {
       border-color: #39a6b2;
   }
-  /* apply style to what you do section */
-  .steps div {
-      margin-bottom: 80px;
-  }
-  /* apply style to what you do icon */
-  .steps img {
-      width: 15%;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
   /* apply style to what you do header */
-  .steps h3 {
+  .step h3 {
       color: #024e76;
       font-size: 46px;
-      margin-top: 10px;
+      flex: 1 30%;
+  }
+  /* apply style to step info flex box */
+  .step-info {
+      flex: 2 70%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+  /* apply style to steps images */
+  .step-img {
+      flex: 1 12%;
+      margin-right: 20px;
+  }
+  /* apply max width to step images */
+  .step-img img {
+      max-width: 100%;
+  }
+  /* apply standardization to step text */
+  .step-text {
+      flex: 12;
   }
   /* apply style to what you do p txt */
-  .steps p {
+  .step-text p {
       color: #39a6b2;
-      font-size: 23px;
+      font-size: 18px;
   }
-  /* apply style to span used in what you do header */
-  .steps span {
-      font-size: 38px;
+  /* apply styles to step h4 headers */
+  .step-text h4 {
+      font-size: 26px;
+      line-height: 1.5;
+      color: #024e76;
+  }
+  .step {
+    margin: 50px auto;
+    padding-bottom: 50px;
+    width: 80%;
+    border-bottom: 1px solid #39a6b2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
   /* apply styles to trainer bio section */
   .trainers {}

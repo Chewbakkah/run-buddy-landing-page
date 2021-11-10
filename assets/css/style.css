@@ -1,364 +1,472 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 /* apply styles to <body> */
 body {
-    color: #39a6b2;
-    font-family: Helvetica, Arial, sans-serif;
+	color: #39a6b2;
+	font-family: Helvetica, Arial, sans-serif;
 }
 /* apply styles to <header> */
 header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-    background-color: #39a6b2;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  /* apply styles to header h1 */
-  header h1 {
-      font-weight: bold;
-      font-size: 36px;
-      color: #fce138;
-      margin: 0;
-  }
-  /* apply styles to header link */
-  header a {
-      text-decoration: none;
-      color: #fce138;
-  }
-  /* apply styles to header nav */
-  header nav {
-      margin-top: 7px;
-      margin-bottom: 7px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-  /* apply styles to header nav list*/
-  header nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      list-style: none;
-  }
-  /* apply styles to header nav text */
-  header nav ul li a {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-left: 30px;
-      margin-right: 30px;
-      font-weight: lighter;
-      font-size: 1.55vw;
-  }
-  /* apply styles to footer */
-  footer {
-      background: #fce138;
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-left: 35px;
-      padding-right: 35px;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
-  /* apply styles to footer h2 */
-  footer h2 {
-      color: #024e76;
-      font-size: 30px;
-      margin: 0;
-  }
-  /* apply styles to footer div */
-  footer div {
-      line-height: 1.5;
-      text-align: right;
-  }
-  /* apply styles to footer link */
-  footer a {
-      color: #024e76;
-  }
-  /* apply padding to all section elements */
-  section {
-      padding: 60px;
-  }
-  /* apply styles to hero */
-  .hero {
-      background-image: url("../images/hero-bg.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-  }
-  /* apply styles to hero-form */
-  .hero-form {
-      background-color: #fce138;
-      padding: 20px;
-      color: #024e76;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #024e76;
-      width: 40%;
-      margin: 3.5%
-  }
-  /* apply styles to h3 */
-  .hero-form h3 {
-      margin: 0px;
-      font-size: 24px;
-  }
-  /* apply styles to form body text */
-  .hero-form p {
-      margin-top: 5px;
-      margin-bottom: 15px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-  /* apply sytles to form input boxes */
-  .form-input {
-      border: 1px solid #024e76;
-      display: block;
-      padding-top: 7px;
-      padding-bottom: 7px;
-      padding-left: 15px;
-      padding-right: 15px;
-      font-size: 16px;
-      color:#024e76;
-      width: 100%;
-      margin-bottom: 15px;
-  }
-  /*apply styles to form radio button selections */
-  .hero-form label {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-left: 5px;
-      margin-right: 5px;
-  }
-  /*apply styles to form submit button */
-  .hero-form button{
-      background-color: #024e76;
-      border: none;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 16px;
-      color: #fce138;
-  }
-  /* apply styles to what we do txt */
-  .intro p {
-      line-height: 1.7;
-      color: #39a6b2;
-      width: 80%;
-      font-size: 20px;
-      margin: 0 auto;
-      text-align: center;
-  }
-  /* apply styles to what you do section */
-  .steps {
-      background: #fce138;
-  }
-  /* apply style to body content headers */
-  .section-title {
-      font-size: 55px;
-      color: #024e76;
-      border-bottom: 3px;
-      border-bottom: solid;
-      padding-bottom: 20px;
-      text-align: center;
-      margin: 0 auto 35px auto;
-      width: 50%;
-  }
-  /* apply style to border under content header what we do */
-  .primary-border {
-      border-color:#fce138;
-  }
-  /* apply style to border under content header what you do */
-  .secondary-border {
-      border-color: #39a6b2;
-  }
-  /* apply style to what you do header */
-  .step h3 {
-      color: #024e76;
-      font-size: 46px;
-      flex: 1 30%;
-  }
-  /* apply style to step info flex box */
-  .step-info {
-      flex: 2 70%;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-  }
-  /* apply style to steps images */
-  .step-img {
-      flex: 1 12%;
-      margin-right: 20px;
-  }
-  /* apply max width to step images */
-  .step-img img {
-      max-width: 100%;
-  }
-  /* apply standardization to step text */
-  .step-text {
-      flex: 12;
-  }
-  /* apply style to what you do p txt */
-  .step-text p {
-      color: #39a6b2;
-      font-size: 18px;
-  }
-  /* apply styles to step h4 headers */
-  .step-text h4 {
-      font-size: 26px;
-      line-height: 1.5;
-      color: #024e76;
-  }
-  .step {
-    margin: 50px auto;
-    padding-bottom: 50px;
-    width: 80%;
-    border-bottom: 1px solid #39a6b2;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-  /* apply styles to trainer bio section */
-  .trainers {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  /* apply styles to trainer article */
-  .trainer {
-      margin-top: 0px;
-      margin-bottom: 20px;
-      margin-left: 2px;
-      margin-right: 2px;
-      background: #024e76;
-      color: #fce138;
-      flex: 1;
-  }
-  /* apply styles to trainer image */
-  .trainer img {
-      width: 100%;
-  }
-  /* apply styles to trainer bio */
-  .trainer-bio {
-      padding: 25px;
-      line-height: 1.3;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio h3 {
-      font-size: 28px;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio h4 {
-      font-weight: lighter;
-      font-size: 22px;
-      margin-bottom: 15px;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio p {
-      font-size: 17px;
-  }
-  /* apply style to flexbox for contact info */
-  .contact-info {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
-  .contact-info > * {
-      flex: 1;
-      margin: 15px;
-  }
-  /* apply styles to reach out section */
-  .contact {
-      background: #024e76;
-  }
-  /* apply styles to reach out heading */
-  .contact h2 {
-      color: #fce138;
-  }
-  /* apply styles to the iframe in contact info */
-  .contact-info iframe {
-      height: 400px;
-  }
-  /* apply styles to the contact info second column */
-  .contact-info div {
-      color: #ffffff;
-  }
-  /* apply style contact info head text */
-  .contact-info h3 {
-    color: #fce138;
-    font-size: 32px;
-  }
-  /* apply style contact info p */
-  .contact-info p, .contact-info address {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: 0px;
-      margin-right: 0px;
-      line-height: 1.5;
-      font-size: 16px;
-      font-style: normal;
-  }
-  /* apply style to contact info form */
-  .contact-form input, .contact-form textarea {
-      border: 1px solid #024e76;
-      display: block;
-      padding: 7px 15px;
-      font-size: 16px;
-      color: #024e76;
-      width: 100%;
-      margin-bottom: 15px;
-      margin-top: 5px;
-  }
-  /* apply style to contact info button */
-  .contact-form button {
-      width: 100%;
-      border: none;
-      background: #fce138;
-      color: #024e76;
-      text-align: center;
-      padding: 15px 0;
-      font-size: 16px;
-
-  }
-  /* apply style contact info link */
-  .contact-info a {
-      color: #fce138;
-  }
-  /* apply style to hero cta text */
-  .hero-cta {
-      width: 35%;
-      text-align: right;
-      margin: 3.5%;
-      color: #ffffff;
-      font-size: 18px;
-      line-height: 1.3;
-  }
-  /* apply style to hero H2 */
-  .hero-cta h2 {
-      font-style: italic;
-      font-size: 55px;
-      color: #fce138;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 35px;
+	padding-right: 35px;
+	background-color: #39a6b2;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
-  /* applys style to override text alignment */
-  .text-left {
-    text-align: left;
+/* apply styles to header h1 */
+header h1 {
+	font-weight: bold;
+	font-size: 36px;
+	color: #fce138;
+	margin: 0;
+}
+/* apply styles to header link */
+header a {
+	text-decoration: none;
+	color: #fce138;
+}
+/* apply styles to header nav */
+header nav {
+	margin-top: 7px;
+	margin-bottom: 7px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+/* apply styles to header nav list*/
+header nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+}
+/* apply styles to header nav text */
+header nav ul li a {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-weight: lighter;
+	font-size: 1.55vw;
+}
+/* apply styles to footer */
+footer {
+	background: #fce138;
+	width: 100%;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 35px;
+	padding-right: 35px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+/* apply styles to footer h2 */
+footer h2 {
+	color: #024e76;
+	font-size: 30px;
+	margin: 0;
+}
+/* apply styles to footer div */
+footer div {
+	line-height: 1.5;
+	text-align: right;
+}
+/* apply styles to footer link */
+footer a {
+	color: #024e76;
+}
+/* apply padding to all section elements */
+section {
+	padding: 60px;
+}
+/* apply styles to hero */
+.hero {
+	background-image: url("../images/hero-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+/* apply styles to hero-form */
+.hero-form {
+	background-color: #fce138;
+	padding: 20px;
+	color: #024e76;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #024e76;
+	width: 40%;
+	margin: 3.5%;
+}
+/* apply styles to h3 */
+.hero-form h3 {
+	margin: 0px;
+	font-size: 24px;
+}
+/* apply styles to form body text */
+.hero-form p {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+/* apply sytles to form input boxes */
+.form-input {
+	border: 1px solid #024e76;
+	display: block;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 16px;
+	color: #024e76;
+	width: 100%;
+	margin-bottom: 15px;
+}
+/*apply styles to form radio button selections */
+.hero-form label {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/*apply styles to form submit button */
+.hero-form button {
+	background-color: #024e76;
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 16px;
+	color: #fce138;
+}
+/* apply styles to what we do txt */
+.intro p {
+	line-height: 1.7;
+	color: #39a6b2;
+	width: 80%;
+	font-size: 20px;
+	margin: 0 auto;
+	text-align: center;
+}
+/* apply styles to what you do section */
+.steps {
+	background: #fce138;
+}
+/* apply style to body content headers */
+.section-title {
+	font-size: 48px;
+	color: #024e76;
+	border-bottom: 3px;
+	border-bottom: solid;
+	padding-bottom: 20px;
+	text-align: center;
+	margin: 0 auto 35px auto;
+	width: 50%;
+}
+/* apply style to border under content header what we do */
+.primary-border {
+	border-color: #fce138;
+}
+/* apply style to border under content header what you do */
+.secondary-border {
+	border-color: #39a6b2;
+}
+/* apply style to what you do header */
+.step h3 {
+	color: #024e76;
+	font-size: 46px;
+	flex: 1 30%;
+}
+/* apply style to step info flex box */
+.step-info {
+	flex: 2 70%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+/* apply style to steps images */
+.step-img {
+	flex: 1 12%;
+	margin-right: 20px;
+}
+/* apply max width to step images */
+.step-img img {
+	max-width: 100%;
+}
+/* apply standardization to step text */
+.step-text {
+	flex: 12;
+}
+/* apply style to what you do p txt */
+.step-text p {
+	color: #39a6b2;
+	font-size: 18px;
+}
+/* apply styles to step h4 headers */
+.step-text h4 {
+	font-size: 26px;
+	line-height: 1.5;
+	color: #024e76;
+}
+.step {
+	margin: 50px auto;
+	padding-bottom: 50px;
+	width: 80%;
+	border-bottom: 1px solid #39a6b2;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+/* apply styles to trainer bio section */
+.trainers {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+/* apply styles to trainer article */
+.trainer {
+	margin-top: 0px;
+	margin-bottom: 20px;
+	margin-left: 2px;
+	margin-right: 2px;
+	background: #024e76;
+	color: #fce138;
+	flex: 1;
+}
+/* apply styles to trainer image */
+.trainer img {
+	width: 100%;
+}
+/* apply styles to trainer bio */
+.trainer-bio {
+	padding: 25px;
+	line-height: 1.3;
+}
+/* apply style to trainer bio text */
+.trainer-bio h3 {
+	font-size: 28px;
+}
+/* apply style to trainer bio text */
+.trainer-bio h4 {
+	font-weight: lighter;
+	font-size: 22px;
+	margin-bottom: 15px;
+}
+/* apply style to trainer bio text */
+.trainer-bio p {
+	font-size: 17px;
+}
+/* apply style to flexbox for contact info */
+.contact-info {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.contact-info > * {
+	flex: 1;
+	margin: 15px;
+}
+/* apply styles to reach out section */
+.contact {
+	background: #024e76;
+}
+/* apply styles to reach out heading */
+.contact h2 {
+	color: #fce138;
+}
+/* apply styles to the iframe in contact info */
+.contact-info iframe {
+	height: 400px;
+}
+/* apply styles to the contact info second column */
+.contact-info div {
+	color: #ffffff;
+}
+/* apply style contact info head text */
+.contact-info h3 {
+	color: #fce138;
+	font-size: 32px;
+}
+/* apply style contact info p */
+.contact-info p,
+.contact-info address {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+	line-height: 1.5;
+	font-size: 16px;
+	font-style: normal;
+}
+/* apply style to contact info form */
+.contact-form input,
+.contact-form textarea {
+	border: 1px solid #024e76;
+	display: block;
+	padding: 7px 15px;
+	font-size: 16px;
+	color: #024e76;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-top: 5px;
+}
+/* apply style to contact info button */
+.contact-form button {
+	width: 100%;
+	border: none;
+	background: #fce138;
+	color: #024e76;
+	text-align: center;
+	padding: 15px 0;
+	font-size: 16px;
+}
+/* apply style contact info link */
+.contact-info a {
+	color: #fce138;
+}
+/* apply style to hero cta text */
+.hero-cta {
+	width: 35%;
+	text-align: right;
+	margin: 3.5%;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 1.2;
+}
+/* apply style to hero H2 */
+.hero-cta h2 {
+	font-style: italic;
+	font-size: 55px;
+	color: #fce138;
+}
+/* applys style to override text alignment */
+.text-left {
+	text-align: left;
 }
 /* applys style to override text alignment */
 .text-right {
-    text-align: right;
+	text-align: right;
 }
 .flex-row {
-    display: flex;
+	display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+	header {
+		padding-bottom: 0;
+		justify-content: center;
+	}
+
+	header h1 {
+		width: 100%;
+		text-align: center;
+	}
+
+	header nav ul {
+		margin-top: 20px;
+		width: 100%;
+		justify-content: center;
+	}
+
+	header nav ul li a {
+		font-size: 20px;
+	}
+
+	footer h2,
+	footer div {
+		text-align: center;
+		width: 100%;
+	}
+	.hero-cta,
+	.hero-form {
+		width: 100%;
+	}
+
+	.hero-cta {
+		text-align: center;
+	}
+	.section-title {
+		width: 80%;
+	}
+
+	.trainer {
+		flex: 0 70%;
+	}
+
+	.contact-info iframe {
+		flex: 1 100%;
+	}
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+	section {
+		padding: 30px 15px;
+	}
+	.step h3 {
+		flex: 1 100%;
+		text-align: center;
+	}
+
+	.step-info {
+		flex: 2 100%;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.step-img {
+		flex: 0 32%;
+		margin-right: 0;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.step-text {
+		flex: 100%;
+	}
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+	.hero-form button {
+		width: 100%;
+	}
+
+	.section-title {
+		width: 95%;
+	}
+
+	.intro p {
+		width: 100%;
+	}
+
+	.trainer {
+		flex: 0 100%;
+	}
+
+	.contact-info {
+		text-align: center;
+	}
+
+	.contact-info > * {
+		flex: 0 100%;
+	}
+	.contact-form {
+		order: 3;
+	}
 }

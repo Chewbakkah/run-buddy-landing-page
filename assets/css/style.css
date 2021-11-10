@@ -240,8 +240,8 @@ header {
   .trainer {
       margin-top: 0px;
       margin-bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: 2px;
+      margin-right: 2px;
       background: #024e76;
       color: #fce138;
       flex: 1;
@@ -269,6 +269,16 @@ header {
   .trainer-bio p {
       font-size: 17px;
   }
+  /* apply style to flexbox for contact info */
+  .contact-info {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+  .contact-info > * {
+      flex: 1;
+      margin: 15px;
+  }
   /* apply styles to reach out section */
   .contact {
       background: #024e76;
@@ -279,19 +289,10 @@ header {
   }
   /* apply styles to the iframe in contact info */
   .contact-info iframe {
-      width: 400px;
       height: 400px;
   }
   /* apply styles to the contact info second column */
   .contact-info div {
-      width: 410px;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      margin-top: 30px;
-      margin-bottom: 0px;
-      margin-left: 60px;
-      margin-right: 0px;
       color: #ffffff;
   }
   /* apply style contact info head text */
@@ -306,8 +307,30 @@ header {
       margin-left: 0px;
       margin-right: 0px;
       line-height: 1.5;
-      font-size: 20px;
+      font-size: 16px;
       font-style: normal;
+  }
+  /* apply style to contact info form */
+  .contact-form input, .contact-form textarea {
+      border: 1px solid #024e76;
+      display: block;
+      padding: 7px 15px;
+      font-size: 16px;
+      color: #024e76;
+      width: 100%;
+      margin-bottom: 15px;
+      margin-top: 5px;
+  }
+  /* apply style to contact info button */
+  .contact-form button {
+      width: 100%;
+      border: none;
+      background: #fce138;
+      color: #024e76;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 16px;
+
   }
   /* apply style contact info link */
   .contact-info a {

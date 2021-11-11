@@ -1,306 +1,596 @@
+:root {
+	--primary-color: #fce138;
+	--secondary-color: #024e76;
+	--tertiary-color: #39a6b2;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 /* apply styles to <body> */
 body {
-    color: #39a6b2;
-    font-family: Helvetica, Arial, sans-serif;
+  color: #39a6b2;
+  font-family: Helvetica, Arial, sans-serif;
 }
 /* apply styles to <header> */
 header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 35px;
-    padding-right: 35px;
-    background-color: #39a6b2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  background-color: #39a6b2;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  z-index: 9999;
+}
+/* apply styles to header h1 */
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* apply styles to header link */
+header a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+/* apply styles to header nav */
+header nav {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* apply styles to header nav list*/
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+/* apply styles to header nav text */
+header nav ul li a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* apply hover style to button */
+header nav ul li a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 15px;
+  text-shadow: none;
+}
+/* apply styles to footer */
+footer {
+  background: #fce138;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 35px;
+  padding-right: 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* apply styles to footer h2 */
+footer h2 {
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
+}
+/* apply styles to footer div */
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+/* apply styles to footer link */
+footer a {
+  color: #024e76;
+}
+/* apply padding to all section elements */
+section {
+  padding: 60px;
+}
+/* apply styles to hero */
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+/* apply styles to hero-form */
+.hero-form {
+  background-color: rgba(252, 225, 56, 0.8);
+  padding: 20px;
+  color: #024e76;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #024e76;
+  width: 40%;
+  margin: 3.5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+/* apply styles to h3 */
+.hero-form h3 {
+  margin: 0px;
+  font-size: 24px;
+}
+/* apply styles to form body text */
+.hero-form p {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+/* apply sytles to form input boxes */
+.form-input {
+  border: 1px solid #024e76;
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/*apply style to form focus state */
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+/*apply styles to form radio button selections */
+.hero-form label {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* styling to hide the radio buttons and checkboxes */
+.checkbox-wrapper input,
+.radio-wrapper input {
+  opacity: 0;
+}
+/* style for the new radio and checkbox positioning */
+.checkbox-wrapper label,
+.radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+/* placing in new radio and checkbox */
+.checkbox-wrapper label::before,
+.radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #024e76;
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+/* applying circle style to radio button */
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+/* applying checked boxes for fake stupid radio buttons */
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #024e76;
+  position: absolute;
+  left: -29px;
+  top: -3px;
+  background-image: radial-gradient(circle, #39a6b2, #024e76);
+}
+/* applying checked boxes for fake stupid check boxes */
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid #024e76;
+  border-bottom: 2px solid #024e76;
+  position: absolute;
+  left: -26px;
+  top: 1px;
+  transform: rotate(-58deg);
+}
+.checkbox-wrapper input:checked + label,
+.radio-wrapper input:checked + label {
+  font-weight: bold;
+}
+/* unchecking stupid radio as default */
+.checkbox-wrapper input + label::after,
+.radio-wrapper input + label::after {
+  content: none;
+}
+/* unchecking stupid checkboxes as default */
+.checkbox-wrapper input:checked + label::after,
+.radio-wrapper input:checked + label::after {
+  content: "";
+}
+/*apply styles to form submit button */
+.hero-form button {
+  background-color: #024e76;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  color: #fce138;
+  border-radius: 10px;
+}
+/* apply hover to form button */
+.hero-form button:hover {
+  background-color: #39a6b2;
+}
+/* apply styles to what we do txt */
+.intro p {
+  line-height: 1.7;
+  color: #39a6b2;
+  width: 80%;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* apply styles to what you do section */
+.steps {
+  background: #fce138;
+}
+/* apply style to body content headers */
+.section-title {
+  font-size: 48px;
+  color: #024e76;
+  border-bottom: 3px;
+  border-bottom: solid;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0 auto 35px auto;
+  width: 50%;
+}
+/* apply style to border under content header what we do */
+.primary-border {
+  border-color: #fce138;
+}
+/* apply style to border under content header what you do */
+.secondary-border {
+  border-color: #39a6b2;
+}
+/* apply style to what you do header */
+.step h3 {
+  color: #024e76;
+  font-size: 46px;
+  flex: 1 30%;
+}
+/* apply style to step info flex box */
+.step-info {
+  flex: 2 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/* apply style to steps images */
+.step-img {
+  flex: 1 12%;
+  margin-right: 20px;
+}
+/* apply max width to step images */
+.step-img img {
+  max-width: 100%;
+}
+/* apply standardization to step text */
+.step-text {
+  flex: 12;
+}
+/* apply style to what you do p txt */
+.step-text p {
+  color: #39a6b2;
+  font-size: 18px;
+}
+/* apply styles to step h4 headers */
+.step-text h4 {
+  font-size: 26px;
+  line-height: 1.5;
+  color: #024e76;
+}
+.step {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #39a6b2;
+}
+/* remove border from last step bottom */
+.step:last-child {
+  border-bottom: none;
+}
+/* apply styles to trainer bio section */
+.trainers {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/* apply styles to trainer article */
+.trainer {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: #024e76;
+  color: #fce138;
+  flex: 1;
+}
+/* apply styles to trainer image */
+.trainer img {
+  width: 100%;
+}
+/* apply styles to trainer bio */
+.trainer-bio {
+  padding: 25px;
+  line-height: 1.3;
+}
+/* apply style to trainer bio text */
+.trainer-bio h3 {
+  font-size: 28px;
+}
+/* apply style to trainer bio text */
+.trainer-bio h4 {
+  font-weight: lighter;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+/* apply style to trainer bio text */
+.trainer-bio p {
+  font-size: 17px;
+}
+/* apply style to flexbox for contact info */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact-info > * {
+  flex: 1;
+  margin: 15px;
+}
+/* apply styles to reach out section */
+.contact {
+  background: #024e76;
+}
+/* apply styles to reach out heading */
+.contact h2 {
+  color: #fce138;
+}
+/* apply styles to the iframe in contact info */
+.contact-info iframe {
+  height: 400px;
+}
+/* apply styles to the contact info second column */
+.contact-info div {
+  color: #ffffff;
+}
+/* apply style contact info head text */
+.contact-info h3 {
+  color: #fce138;
+  font-size: 32px;
+}
+/* apply style contact info p */
+.contact-info p,
+.contact-info address {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  line-height: 1.5;
+  font-size: 16px;
+  font-style: normal;
+}
+/* apply style to contact info form */
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #024e76;
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #024e76;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+/* contact form input focus opaque */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+/* apply style to contact info button */
+.contact-form button {
+  width: 100%;
+  border: none;
+  background: #fce138;
+  color: #024e76;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+}
+/* apply hover to contact button */
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
+}
+/* apply style contact info link */
+.contact-info a {
+  color: #fce138;
+}
+/* apply style to hero cta text */
+.hero-cta {
+  width: 35%;
+  text-align: right;
+  margin: 3.5%;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.2;
+}
+/* apply style to hero H2 */
+.hero-cta h2 {
+  font-style: italic;
+  font-size: 55px;
+  color: #fce138;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+/* applys style to override text alignment */
+.text-left {
+  text-align: left;
+}
+/* applys style to override text alignment */
+.text-right {
+  text-align: right;
+}
+.flex-row {
+  display: flex;
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
   }
-  /* apply styles to header h1 */
+
   header h1 {
-      font-weight: bold;
-      font-size: 36px;
-      color: #fce138;
-      margin: 0;
-      display: inline;
+    width: 100%;
+    text-align: center;
   }
-  /* apply styles to header link */
-  header a {
-      text-decoration: none;
-      color: #fce138;
+
+  header nav ul {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
   }
-  /* apply styles to header nav */
-  header nav {
-      float: right;
-      margin-top: 7px;
-      margin-bottom: 7px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-  /* apply styles to header nav list*/
-  header nav ul li {
-      display: inline;
-  }
-  /* apply styles to header nav text */
+
   header nav ul li a {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-left: 30px;
-      margin-right: 30px;
-      font-weight: lighter;
-      font-size: 22px;
+    font-size: 20px;
   }
-  /* apply styles to footer */
-  footer {
-      background: #fce138;
-      width: 100%;
-      padding-top: 40px;
-      padding-bottom: 40px;
-      padding-left: 35px;
-      padding-right: 35px;
-  }
-  /* apply styles to footer h2 */
-  footer h2 {
-      display: inline;
-      color: #024e76;
-      font-size: 30px;
-      margin: 0;
-  }
-  /* apply styles to footer div */
+
+  footer h2,
   footer div {
-      float: right;
-      line-height: 1.5;
-      text-align: right;
+    text-align: center;
+    width: 100%;
   }
-  /* apply styles to footer link */
-  footer a {
-      color: #024e76;
-  }
-  /* apply padding to all section elements */
-  section {
-      padding: 60px;
-  }
-  /* apply styles to hero */
-  .hero {
-      background-image: url("../images/hero-bg.jpg");
-      height: 600px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-  }
-  /* apply styles to hero-form */
+  .hero-cta,
   .hero-form {
-      background-color: #fce138;
-      padding: 20px;
-      width: 500px;
-      color: #024e76;
-      border-style: solid;
-      border-width: 3px;
-      border-color: #024e76;
-      position: absolute;
-      bottom: 120px;
-      right: 140px;
+    width: 100%;
   }
-  /* apply styles to h3 */
-  .hero-form h3 {
-      margin: 0px;
-      font-size: 24px;
+
+  .hero-cta {
+    text-align: center;
   }
-  /* apply styles to form body text */
-  .hero-form p {
-      margin-top: 5px;
-      margin-bottom: 15px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-  /* apply sytles to form input boxes */
-  .form-input {
-      border: 1px solid #024e76;
-      display: block;
-      padding-top: 7px;
-      padding-bottom: 7px;
-      padding-left: 15px;
-      padding-right: 15px;
-      font-size: 16px;
-      color:#024e76;
-      width: 100%;
-      margin-bottom: 15px;
-  }
-  /*apply styles to form radio button selections */
-  .hero-form label {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-left: 5px;
-      margin-right: 5px;
-  }
-  /*apply styles to form submit button */
-  .hero-form button{
-      background-color: #024e76;
-      border: none;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 16px;
-      color: #fce138;
-  }
-  /* apply styles to what we do */
-  .intro {
-      text-align: center;
-  }
-  /* apply styles to what we do txt */
-  .intro p {
-      line-height: 1.7;
-      color: #39a6b2;
-      width: 80%;
-      font-size: 20px;
-      margin: 0 auto;
-  }
-  /* apply styles to what you do section */
-  .steps {
-      text-align: center;
-      background: #fce138;
-  }
-  /* apply style to body content headers */
   .section-title {
-      font-size: 55px;
-      color: #024e76;
-      margin-bottom: 35px;
-      padding-top: 0px;
-      padding-bottom: 20px;
-      padding-left: 100px;
-      padding-right: 100px;
-      border-bottom: 3px;
-      border-bottom: solid;
-      display: inline-block;
+    width: 80%;
   }
-  /* apply style to border under content header what we do */
-  .primary-border {
-      border-color:#fce138;
-  }
-  /* apply style to border under content header what you do */
-  .secondary-border {
-      border-color: #39a6b2;
-  }
-  /* apply style to what you do section */
-  .steps div {
-      margin-bottom: 80px;
-  }
-  /* apply style to what you do icon */
-  .steps img {
-      width: 15%;
-      margin-top: 10px;
-      margin-bottom: 10px;
-      margin-left: 0px;
-      margin-right: 0px;
-  }
-  /* apply style to what you do header */
-  .steps h3 {
-      color: #024e76;
-      font-size: 46px;
-      margin-top: 10px;
-  }
-  /* apply style to what you do p txt */
-  .steps p {
-      color: #39a6b2;
-      font-size: 23px;
-  }
-  /* apply style to span used in what you do header */
-  .steps span {
-      font-size: 38px;
-  }
-  /* apply styles to trainer bio section */
-  .trainers {
-      text-align: center;
-  }
-  /* apply styles to trainer article */
+
   .trainer {
-      width 900px;
-      margin-top: 0px;
-      margin-bottom: 30px;
-      margin-left: auto;
-      margin-right: auto;
-      background: #024e76;
-      color: #fce138;
-      overflow: auto;
+    flex: 0 70%;
   }
-  /* apply styles to trainer image */
-  .trainer img {
-      width: 35%;
-      float: left;
-  }
-  /* apply styles to trainer bio */
-  .trainer-bio {
-      padding: 35px;
-      float: left;
-      width: 65%;
-  }
-  /* applys style to override text alignment */
-  .text-left {
-      text-align: left;
-  }
-  /* applys style to override text alignment */
-  .text-right {
-      text-align: right;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio h3 {
-      font-size: 32px;
-      margin-bottom: 8px;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio h4 {
-      font-weight: lighter;
-      font-size: 26px;
-      margin-bottom: 25px;
-  }
-  /* apply style to trainer bio text */
-  .trainer-bio p {
-      font-size: 17px;
-      line-height: 1.3;
-  }
-  /* apply styles to reach out section */
-  .contact {
-      text-align: center;
-      background: #024e76;
-  }
-  /* apply styles to reach out heading */
-  .contact h2 {
-      color: #fce138;
-  }
-  /* apply styles to the iframe in contact info */
+
   .contact-info iframe {
-      width: 400px;
-      height: 400px;
+    flex: 1 100%;
   }
-  /* apply styles to the contact info second column */
-  .contact-info div {
-      width: 410px;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      margin-top: 30px;
-      margin-bottom: 0px;
-      margin-left: 60px;
-      margin-right: 0px;
-      color: #ffffff;
+}
+
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 30px 15px;
   }
-  /* apply style contact info head text */
-  .contact-info h3 {
-    color: #fce138;
-    font-size: 32px;
+  .step h3 {
+    flex: 1 100%;
+    text-align: center;
   }
-  /* apply style contact info p */
-  .contact-info p, .contact-info address {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      margin-left: 0px;
-      margin-right: 0px;
-      line-height: 1.5;
-      font-size: 20px;
-      font-style: normal;
+
+  .step-info {
+    flex: 2 100%;
+    text-align: center;
+    justify-content: center;
   }
-  /* apply style contact info link */
-  .contact-info a {
-      color: #fce138;
+
+  .step-img {
+    flex: 0 32%;
+    margin-right: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
+
+  .step-text {
+    flex: 100%;
+  }
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+  .hero-form button {
+    width: 100%;
+  }
+
+  .section-title {
+    width: 95%;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .trainer {
+    flex: 0 100%;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info > * {
+    flex: 0 100%;
+  }
+  .contact-form {
+    order: 3;
+  }
+}
